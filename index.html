@@ -1,15 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".css">
-    <script src="script.js" defer></script>
-
-    <title>Document</title>
+    <title>WAKINAWA - Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Green bananas </h1>
-    <button onclick= "alert('Welcome customer')"> Place order</button>
+
+    <header class="blue">
+        <h1>WAKINAWA</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <h1>Welcome to WAKINAWA</h1>
+        <p>Manage your students easily in one place.</p>
+        <button class="black">Register a Student</button>
+    </section>
+
+    <section id="dashboard">
+        <h2 class="sonia">Dashboard</h2>
+        <div class="stats">
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+            <div class="card">
+                <h3>Passed</h3>
+                <p id="totalPassed">0</p>
+            </div>
+            <div class="card">
+                <h3>Failed</h3>
+                <p id="totalFailed">0</p>
+            </div>
+            <div class="card">
+                <h3>Average Marks</h3>
+                <p id="averageMarks">0</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="registerpart">
+        <section id="register">
+            <h2 class="sonia">Register a Student</h2>
+
+            <form id="studentForm">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName">
+
+                <label for="age">Age</label>
+                <input type="text" id="age">
+
+                <label for="gender">Gender</label>
+                <select id="gender">
+                    <option value="">-- Select gender --</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Undecided">Undecided</option>
+                    <option value="Something else">Something else</option>
+                    <option value="Gay">Gay</option>
+
+
+
+
+                </select>
+
+                <label for="course">Course</label>
+                <select id="course">
+                    <option value="">-- Select course --</option>
+                    <option value="Software Development">Software Development</option>
+                    <option value="Web Design">Web Design</option>
+                    <option value="Data Analysis">Data Analysis</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                    <option value="Networking">Networking</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                </select>
+
+                <label for="marks">Marks</label>
+                <input type="text" id="marks">
+
+                <button type="submit" class="black">Register Student</button>
+            </form>
+
+            <p id="formMessage"></p>
+        </section>
+    </div>
+
+    <section id="search">
+        <h2 class="sonia">Search Student</h2>
+        <input type="text" id="searchInput" placeholder="Enter student name">
+        <button id="searchBtn" class="btn">Search</button>
+        <button id="showAllBtn" class="btn">Show All</button>
+        <p id="searchMessage"></p>
+    </section>
+
+    <section id="records">
+        <h2 class="sonia">Student Records</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Course</th>
+                    <th>Marks</th>
+                    <th>Performance</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="recordsBody">
+            </tbody>
+        </table>
+    </section>
+
+    <section id="summary">
+        <h2 class="sonia">Performance Summary</h2>
+        <p>Excellent: <span id="countExcellent">0</span></p>
+        <p>Very Good: <span id="countVeryGood">0</span></p>
+        <p>Good: <span id="countGood">0</span></p>
+        <p>Average: <span id="countAverage">0</span></p>
+        <p>Failed: <span id="countFailed">0</span></p>
+    </section>
+
+    <footer>
+        <p>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="courses.html">Courses</a>
+            <a href="contact.html">Contact</a>
+        </p>
+
+        <p>&copy; 2026 WAKINAWA. All rights reserved.</p>
+    </footer>
+<script src="/script.js"></script>
 </body>
+
 </html>
